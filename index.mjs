@@ -5,7 +5,11 @@ import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+const corsOptions = {
+    origin: 'https://pichael.org',
+    optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 const apiKey = 'BA3825EFCD35B8CF4F48E58C9216E034';
 
